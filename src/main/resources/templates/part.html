@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hasRole在Thymeleaf中的应用</title>
+</head>
+<body>
+<h2>Welcome</h2>
+<p>hasRole在Thymeleaf中的应用</p>
+<div sec:authorize="hasRole('USER')">user 角色能够查看到此信息</div>
+<div sec:authorize="hasRole('ADMIN')">admin 用户能够看到此信息.</div>
+<div sec:authorize="isAuthenticated()">
+    登录用户能看到此信息
+</div>
+当前登录的用户是：
+<div sec:authentication="name"></div>
+如未登录，可以通过访问/admin/test来模拟登录，如想变更登录用户需要重新打开浏览器并重新启动后台。
+</body>
+</html>
