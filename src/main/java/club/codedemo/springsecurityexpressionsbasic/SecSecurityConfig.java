@@ -20,8 +20,14 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * 初始化两个可用的内置用户： admin 以及user
+     *
+     * @param auth 认证构造器
+     * @throws Exception
+     */
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
             .withUser("admin")
             .password(this.passwordEncoder().encode("admin"))
