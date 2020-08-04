@@ -1,5 +1,5 @@
 # spring-security-expressions-basic
-http://www.codedemo.club:81/spring-security-expressions-basic/
+http://www.codedemo.club/spring-security-expressions-basic/
 # 使用说明
 大部分方法的验证放在了单元测试部分。验证功能时请查看单元测试相关代码。
 
